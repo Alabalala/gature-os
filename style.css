@@ -49,7 +49,10 @@ nav {
   background-color: #ffc798;
 }
 
-.dropDown div {
+a {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
   padding: 10px 0;
 }
 
@@ -82,6 +85,7 @@ main {
   border-radius: 20px;
   padding: 10px 15px;
   font-weight: 900;
+  font-size: 20px;
   border: none;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -101,7 +105,7 @@ main {
     #ff9238
   );
   height: 80px;
-  margin-top: 20px;
+  margin-top: 80px;
   margin-bottom: 0;
 }
 
@@ -144,5 +148,87 @@ main {
 }
 
 .dotGroup .selectedDot {
-  background-color: #5e5d5d;
+  background-color: #834b1d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: white;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 10px;
+  background-color: #ff9238;
+  padding: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+form label {
+  font-size: 20px;
+}
+
+label[for="message"] {
+  grid-row: 5/6;
+}
+
+form .message {
+  grid-column: 1/3;
+  grid-row: 6/8;
+}
+
+form input[type="submit"] {
+  background-color: #ffffff;
+  color: black;
+}
+
+form input,
+textarea {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.39);
+}
+
+form .sendButton {
+  grid-row: 8/9;
+  grid-column: 1/3;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #ff9238;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: 900;
+  font-size: 20px;
+  border: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.sendButton:active {
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  font-size: 20px;
+}
+
+.separateForm {
+  height: 10px;
 }

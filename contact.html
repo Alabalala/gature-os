@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/11d0742050.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="topNav">
+        <div class="webLogo">
+          <img src="images/logo-nb.PNG" alt="Gatureños logo" />
+          <div class="nombre">atureños</div>
+        </div>
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="dropDown" hidden>
+        <a href="index.html">
+          <span style="display: block"> Quiénes somos </span>
+        </a>
+        <a href="http://google.com">
+          <span style="display: block"> Cómo ayudar </span>
+        </a>
+        <a href="contact.html">
+          <span class="dropSelected" style="display: block"> Contacto </span>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <h1>FORMULARIO DE CONTACTO</h1>
+      <form>
+        <label required for="name">Nombre</label>
+        <input
+          required
+          pattern="/[A-Z]/ig"
+          minlength="3"
+          maxlength="15"
+          type="text"
+          class="name"
+        />
+        <label required for="surname">Apellidos</label>
+        <input
+          required
+          type="text"
+          minlength="2"
+          maxlength="15"
+          pattern="/[A-Z]/ig"
+          class="surname"
+        />
+        <label required for="email">Email</label>
+        <input required type="email" class="email" />
+        <label required for="message">Tu mensaje:</label>
+        <textarea required class="message"></textarea>
+        <input class="sendButton" type="submit" value="Enviar" />
+      </form>
+
+      <p>Déjanos tu mensaje y trataremos de contestarte lo antes posible.</p>
+    </main>
+    <section class="separateForm"></section>
+    <footer>
+      <p>Web creada por Álvaro Alarcón Bermejo</p>
+      <div>
+        <a href="index.html">
+          <span>Nosotros</span>
+        </a>
+        <span>|</span>
+        <a href="index.html">
+          <span>Ayúdanos</span>
+        </a>
+        <span>|</span>
+        <a href="contact.html">
+          <span>Contacto</span>
+        </a>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="form.js"></script>
+  </body>
+</html>
