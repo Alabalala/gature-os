@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,21 +31,48 @@
           <span style="display: block"> Quiénes somos </span>
         </a>
         <a href="help.html">
-          <span style="display: block"> Cómo ayudar </span>
+          <span class="dropSelected" style="display: block"> Cómo ayudar </span>
         </a>
         <a href="contact.html">
-          <span class="dropSelected" style="display: block"> Contacto </span>
+          <span style="display: block"> Contacto </span>
         </a>
       </div>
     </nav>
     <main>
       <h1>CÓMO AYUDAR</h1>
-      <img id="gif" src="#" />
-      <br />
-      <label for="text">Busca un gif de gatitos</label>
-      <input type="text" class="text" />
-      <button id="buscar">Buscar</button>
+      <p class="normalText">
+        En este momento estamos recogiendo donaciones para crear la primera
+        colonia de gatos en la Era del Rosal, Letur.
+        <br />
+        <br />
+        Si nos ayudas, tu donación se utilizará para: comprar casetas, cuencos,
+        mantas, comida, medicamentos, etc.
+      </p>
+      <button
+        class="help"
+        onclick="window.location.href = 'https://www.gofundme.com/f/primera-colonia-gatos-letur'"
+      >
+        Donar ahora
+      </button>
+      <section class="donationSection">
+        <div class="separator"></div>
+        <div class="cartaDonar">
+          <h2>FONDOS RECAUDADOS</h2>
+          <p>155 € de 710 €</p>
+          <div class="bar">
+            <div class="colorBar"></div>
+          </div>
+          <p>Ayúdanos a llegar al 100%</p>
+          <button
+            onclick="window.location.href = 'https://www.gofundme.com/f/primera-colonia-gatos-letur'"
+            class="help"
+          >
+            Donar ahora
+          </button>
+        </div>
+      </section>
     </main>
+
     <section class="separateForm"></section>
     <footer>
       <p>Web creada por Álvaro Alarcón Bermejo</p>
@@ -64,6 +91,5 @@
       </div>
     </footer>
     <script src="app.js"></script>
-    <script src="cats.js"></script>
   </body>
 </html>

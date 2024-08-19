@@ -13,11 +13,12 @@ fetch(
   });
 
 const findButton = document.getElementById("buscar");
-const searchBox = document.querySelector(".class");
+const searchBox = document.querySelector(".text");
 findButton.addEventListener("click", findCat);
 
 function findCat() {
-  searchInput = findButton.value;
+  searchInput = searchBox.value;
+  console.log(searchInput);
   fetch(
     `https://api.giphy.com/v1/gifs/translate?api_key=QWzzqeKYGdLJrCbWy8aT72WhcMwEYTno&s=${searchInput}+cat`,
     {
