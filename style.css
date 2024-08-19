@@ -1,4 +1,4 @@
-html * {
+html {
   font-family: "Noto Sans", sans-serif;
 }
 
@@ -6,6 +6,7 @@ body {
   margin: 0;
   position: relative;
   min-height: 90vh;
+  min-width: 100vw;
 }
 
 nav {
@@ -72,6 +73,7 @@ a {
 main {
   margin-top: 90px;
   text-align: center;
+  width: 100vw;
 }
 
 .normalText {
@@ -272,6 +274,4 @@ footer a {
 .cartaDonar .help {
   background-color: white;
   color: #ff9238;
-  
-}
 }
