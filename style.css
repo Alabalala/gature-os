@@ -160,7 +160,7 @@ form {
   flex-direction: column;
   width: 80%;
   color: white;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(8, 1fr);
