@@ -11,7 +11,6 @@ body {
 }
 
 nav {
-  background-color: #ff9238;
   color: white;
   position: fixed;
   top: 0;
@@ -23,6 +22,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
+  background-color: #ff9238;
 }
 
 .webLogo {
@@ -51,6 +51,9 @@ nav {
   text-align: center;
   color: black;
   background-color: #ffc798;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-2000px);
 }
 
 a {
@@ -58,6 +61,11 @@ a {
   text-decoration: none;
   color: black;
   padding: 10px 0;
+  width: 100%;
+}
+
+.dropDown span {
+  width: 100%;
 }
 
 .dropDown div:hover,
@@ -69,6 +77,34 @@ a {
   background-color: #ff9238;
   color: white;
   font-weight: 600;
+}
+
+.dropDownIn {
+  animation: 0.8s dropDownAnimeIn 1 forwards;
+}
+
+@keyframes dropDownAnimeIn {
+  from {
+    transform: translateX(-700px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.dropDownOut {
+  animation: 0.8s dropDownAnimeOut 1 forwards;
+}
+
+@keyframes dropDownAnimeOut {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-700px);
+  }
 }
 
 main {

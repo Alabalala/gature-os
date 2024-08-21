@@ -3,8 +3,12 @@ menuIcon.addEventListener("click", showDropDown);
 
 function showDropDown() {
   const dropDown = document.querySelector(".dropDown");
-  if (dropDown.hasAttribute("hidden")) {
-    dropDown.removeAttribute("hidden");
+  if (
+    dropDown.classList.contains("dropDownOut") ||
+    !dropDown.classList.contains("dropDownIn")
+  ) {
+    dropDown.classList.remove("dropDownOut");
+    dropDown.classList.add("dropDownIn");
     menuIcon.classList.remove("fa-solid");
     menuIcon.classList.remove("fa-bars");
     menuIcon.classList.add("fa-solid");
@@ -12,10 +16,12 @@ function showDropDown() {
     document.addEventListener("click", (event) => {
       if (
         !dropDown.contains(event.target) &&
-        !dropDown.hasAttribute("hidden") &&
+        !dropDown.classList.contains("dropDownOut") &&
         !menuIcon.contains(event.target)
       ) {
-        dropDown.setAttribute("hidden", "");
+        dropDown.classList.add("dropDownOut");
+        dropDown.classList.remove("dropDownIn");
+
         menuIcon.classList.remove("fa-solid");
         menuIcon.classList.remove("fa-x");
         menuIcon.classList.add("fa-solid");
@@ -25,7 +31,7 @@ function showDropDown() {
       }
     });
   } else {
-    dropDown.setAttribute("hidden", "");
+    dropDown.classList.add("dropDownOut");
     menuIcon.classList.remove("fa-solid");
     menuIcon.classList.remove("fa-x");
     menuIcon.classList.add("fa-solid");
