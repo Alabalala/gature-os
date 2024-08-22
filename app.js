@@ -38,3 +38,19 @@ function showDropDown() {
     menuIcon.classList.add("fa-bars");
   }
 }
+
+function calculateBar() {
+  let oneHundred = 710;
+  let partValue = 205;
+  let partPercentage = Math.round((partValue / oneHundred) * 100);
+  changeBar(partPercentage);
+  console.log(partPercentage);
+}
+
+function changeBar(per) {
+  console.log("this is called");
+  const colorBar = document.querySelector(".colorBar");
+  colorBar.style.width = `${per}%`;
+}
+
+calculateBar();
