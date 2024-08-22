@@ -86,10 +86,12 @@ a {
 @keyframes dropDownAnimeIn {
   from {
     transform: translateX(-700px);
+    opacity: 0%;
   }
 
   to {
     transform: translateX(0);
+    opacity: 100%;
   }
 }
 
@@ -100,10 +102,14 @@ a {
 @keyframes dropDownAnimeOut {
   from {
     transform: translateX(0);
+    opacity: 100%;
+    visibility: visible;
   }
 
   to {
     transform: translateX(-700px);
+    opacity: 0%;
+    visibility: hidden;
   }
 }
 
@@ -111,6 +117,8 @@ main {
   margin-top: 90px;
   text-align: center;
   width: 100vw;
+  max-width: 1500px;
+  margin: 90px auto 0px auto;
 }
 
 .normalText {
@@ -263,10 +271,6 @@ footer {
   flex-direction: column-reverse;
   padding: 20px;
   text-align: center;
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
 
 footer a {

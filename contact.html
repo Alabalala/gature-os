@@ -41,7 +41,7 @@
     <main>
       <h1>FORMULARIO DE CONTACTO</h1>
       <form>
-        <label required for="name">Nombre</label>
+        <label required for="name">* Nombre</label>
         <input
           required
           pattern="/[A-Z]/ig"
@@ -50,7 +50,7 @@
           type="text"
           class="name"
         />
-        <label required for="surname">Apellidos</label>
+        <label for="surname">Apellidos</label>
         <input
           required
           type="text"
@@ -59,9 +59,9 @@
           pattern="/[A-Z]/ig"
           class="surname"
         />
-        <label required for="email">Email</label>
+        <label required for="email">* Email</label>
         <input required type="email" class="email" />
-        <label required for="message">Tu mensaje:</label>
+        <label required for="message">* Tu mensaje:</label>
         <textarea required class="message"></textarea>
         <input class="sendButton" type="submit" value="Enviar" />
       </form>
